@@ -10,6 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BACKGROUND_IMAGE, NETLIX_USER_ICON } from "../utils/constants";
 
 const Login = () => {
   const [isSignedInForm, setIsSignedInForm] = useState(true);
@@ -50,7 +51,7 @@ const Login = () => {
           // After the user is created, we update the profile of the user using
           updateProfile(user, {
             displayName: fullName.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/85595242?v=4",
+            photoURL: NETLIX_USER_ICON,
           })
             .then(() => {
               // Profile updated!
@@ -63,15 +64,11 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
               setErrorMessage(error.message);
             });
-
-          console.log("Signed Up User", user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -91,8 +88,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed In
           const user = userCredential.user;
-          console.log("Sign In user", user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -112,10 +107,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799315c01dd/web/GH-en-20240923-TRIFECTA-perspective_447250ce-3fca-43ba-bef8-dddcc8484c30_small.jpg"
-          alt="background-image"
-        />
+        <img src={BACKGROUND_IMAGE} alt="background-image" />
       </div>
       <form
         className="w-3/12 absolute my-36 p-12 mx-auto right-0 left-0 bg-black text-white bg-opacity-70"

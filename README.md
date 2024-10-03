@@ -27,7 +27,7 @@
 - custom hook for fetching trailer video using movie id and storing it in the store inside the moviesSlice
 - embedded the youtube video and made it autoplay and mute
 - Tailwind classes added to make main container look good
-
+- Fetch moviesList with different api endspoints (now playing, popular, upcoming, top rated)
 
 # Features
 

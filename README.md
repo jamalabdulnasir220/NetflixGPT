@@ -28,6 +28,10 @@
 - embedded the youtube video and made it autoplay and mute
 - Tailwind classes added to make main container look good
 - Fetch moviesList with different api endspoints (now playing, popular, upcoming, top rated)
+- built GPT search component
+    - built GPT search Bar
+    - built GPT 
+- (Big Feature) Incorporated a multi language feature in the gpt search component
 
 # Features
 

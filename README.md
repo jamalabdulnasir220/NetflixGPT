@@ -32,6 +32,7 @@
     - built GPT search Bar
     - built GPT 
 - (Big Feature) Incorporated a multi language feature in the gpt search component
+- built the gpt feature to recommend movies and display movie name with the list of movies
 
 # Features
 

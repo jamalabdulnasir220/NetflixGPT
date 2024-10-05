@@ -39,7 +39,7 @@ const GptSearchBar = () => {
     if (!result.response) return "No response Found!";
 
     const gptMoviesNames = result.response.text().split(",");
-    console.log(gptMoviesNames);
+    
 
     const promiseArray = gptMoviesNames.map((movie) => searchMoviesTmd(movie));
 

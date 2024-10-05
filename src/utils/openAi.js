@@ -9,8 +9,8 @@
 // export default client;
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { OPEN_AI_KEY } from "./constants";
+import { OPENAI_KEY } from "./constants";
 
-const genAI = new GoogleGenerativeAI(OPEN_AI_KEY);
+const genAI = new GoogleGenerativeAI(OPENAI_KEY);
 
 export const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });

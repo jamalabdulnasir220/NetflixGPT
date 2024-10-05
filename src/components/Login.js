@@ -107,13 +107,13 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={BACKGROUND_IMAGE} alt="background-image" />
+        <img className="h-screen object-cover md:w-screen" src={BACKGROUND_IMAGE} alt="background-image" />
       </div>
       <form
-        className="w-3/12 absolute my-36 p-12 mx-auto right-0 left-0 bg-black text-white bg-opacity-70"
+        className="w-full my-28 p-6  md:w-3/12 absolute md:my-36 md:p-12 md:mx-auto right-0 left-0 bg-black text-white bg-opacity-70"
         onSubmit={(e) => e.preventDefault()}
       >
-        <h1 className="font-bold text-3xl py-4">
+        <h1 className="text-xl font-bold md:text-3xl py-4">
           {isSignedInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignedInForm && (
@@ -121,7 +121,7 @@ const Login = () => {
             ref={fullName}
             type="text"
             placeholder="Full Name"
-            className="p-4 my-4 w-full bg-gray-700"
+            className="p-2 my-2 md:p-4 md:my-4 w-full bg-gray-700"
           />
         )}
         <input

@@ -55,8 +55,8 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between items-center">
-      <img className="w-44" src={NETFLIX_LOGO} alt="neflix logo" />
+    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen h-auto flex flex-col md:flex-row justify-between items-center ">
+      <img className="w-32 md:w-44" src={NETFLIX_LOGO} alt="neflix logo" />
       {user && (
         <div className="flex items-center">
           {gptSearchView && (
@@ -75,7 +75,7 @@ const Header = () => {
             </select>
           )}
           <button
-            className="py-2 px-4 m-2 bg-purple-800 text-white rounded-lg"
+            className="py-1 px-2 m-1 md:py-2 md:px-4 md:m-2 bg-purple-800 text-white rounded-lg"
             onClick={handleGptSearchToggle}
           >
             {

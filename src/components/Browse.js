@@ -18,7 +18,7 @@ const Browse = () => {
  
 
   return (
-    <div>
+    <div className="">
       <Header />
       {gptSearchView ? (
         <GptSearch />

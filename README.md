@@ -32,7 +32,11 @@
     - built GPT search Bar
     - built GPT 
 - (Big Feature) Incorporated a multi language feature in the gpt search component
-- built the gpt feature to recommend movies and display movie name with the list of movies
+- get openAi key
+- built the gpt feature to recommend movies 
+- pass the recommend movies to the tmdb search api to get movies and display in a movielist
+- implemented memoization in the api calls 
+- made my app mobile responsive
 
 # Features
 

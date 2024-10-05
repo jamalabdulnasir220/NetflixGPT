@@ -5,8 +5,8 @@ const MovieList = ({ title, movies }) => {
 
   return (
     <div className="px-24 ">
-      <h1 className="text-xl py-3 text-white">{title}</h1>
-      <div className="flex overflow-hidden scrollbar-hide hover:overflow-x-scroll hover:scrollbar-thin hover:scrollbar-thumb-black hover:scrollbar-track-gray-300">
+      <h1 className="text-lg md:text-xl py-3 text-white">{title}</h1>
+      <div className="flex overflow-x-scroll scrollbar-none cursor-pointer overflow-y-hidden ">
         <div className="flex items-center gap-x-3">
           {movies?.map((movie) => (
             <MovieCard
